@@ -1,0 +1,628 @@
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+:root {
+    --main-theme-color: rgb(250, 169, 19);
+    --main-red: 250;
+    --main-green: 169;
+    --main-blue: 19;
+    --secondary-theme-color: rgb(5, 86, 236);
+    --secondary-red: 5;
+    --secondary-green: 86;
+    --secondary-blue: 236;
+}
+
+body {
+    background: #CCCCCC;
+    font-family: Arial;
+
+    padding: 1em;
+}
+
+header {
+    padding: 0 2%;
+    background: white;
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0 4px 2px -2px rgba(var(--main-red), var(--main-green), var(--main-blue), 0.5);
+}
+
+nav.crumbs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 0;
+}
+
+nav.crumbs>a.logo {
+    margin-right: auto;
+
+    font-size: 3em;
+    font-weight: bold;
+
+    padding: 0.2em 1em 0 1em;
+}
+
+#menu-on {
+    padding: 0.2em 0 0 0;
+    color: #666;
+    font-weight: 100 !important;
+    display: none;
+}
+
+nav.crumbs>a.logo:not(#menu-on)::after {
+    content: "";
+    display: block;
+    inline-size: 100%;
+    block-size: 5px;
+    background: var(--main-theme-color);
+}
+
+nav.crumbs>a {
+    text-decoration: none;
+    color: black;
+}
+
+nav.crumbs>a:not(.logo):not(.social-media) {
+    align-self: stretch;
+    font-size: 1.5em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav.crumbs>a:not(.logo):not(.social-media):hover,
+nav.crumbs>a:not(.logo):not(.social-media):focus,
+nav.crumbs>a:not(.logo):not(.social-media):active {
+    /* color: var(--secondary-theme-color); */
+    background: #F5F5F5;
+    font-weight: bold;
+}
+
+nav.crumbs>a:not(.social-media):focus {
+    outline: none;
+}
+
+nav.crumbs>a.crumb.social-media {
+    color: #666;
+    margin-left: 1em;
+}
+
+nav.crumbs>a.crumb.social-media.first-social {
+    margin-left: 2em;
+}
+
+nav.crumbs>a.crumb:not(.social-media):not(.logo) {
+    flex: 1 0 7em;
+    text-align: center;
+}
+
+nav.mobile-menu {
+    display: none;
+}
+
+main {
+    background: white;
+}
+
+main>section {
+    padding: 2em 15%;
+}
+
+main>section.intro {
+    background: #F5F5F5;
+
+    display: grid;
+    grid:
+        /* Note: you can NOT use repeat() here! Or it won't work! */
+        "first image image" auto "first image image" auto "second second second" auto / 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+main>section.intro h1 {
+    font-size: 3em;
+    font-weight: 900;
+}
+
+main>section.intro h1::after {
+    content: "";
+    display: block;
+    inline-size: 2em;
+    block-size: 5px;
+    background: var(--main-theme-color);
+}
+
+main>section.intro div.start {
+    grid-area: first;
+}
+
+#main-image {
+    inline-size: 90%;
+    margin: auto;
+    grid-area: image;
+    box-shadow: rgba(var(--main-red), var(--main-green), var(--main-blue), 0.3) 0px 22px 70px 4px;
+}
+
+main>section.intro div.end {
+    grid-area: second;
+}
+
+main>section.gallery {
+    display: grid;
+    grid:
+        auto-flow auto / repeat(3, 1fr);
+    gap: 1em;
+}
+
+main>section.gallery>h2.section-header {
+    font-size: 2.5em;
+    font-weight: 900;
+    text-align: center;
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+main>section.gallery>h2.section-header::after {
+    content: "";
+    display: block;
+    inline-size: 100%;
+    block-size: 5px;
+    background: var(--main-theme-color);
+}
+
+main>section.gallery>div.animal:hover {
+    box-sizing: border-box;
+    border: 5px solid rgba(var(--main-red), var(--main-green), var(--main-blue), 0.8);
+}
+
+main>section.gallery>div.animal>img {
+    inline-size: 100%;
+    block-size: 100%;
+    transition: opacity 0.5s ease;
+}
+
+main>section.gallery>div.animal>img:hover {
+    opacity: 0.8;
+}
+
+main>section.preservation {
+    display: grid;
+    grid: repeat(2, auto) / 2fr 1fr 1fr;
+    gap: 1em;
+}
+
+main>section.preservation>div.summary {
+    margin: 0 2em 0 0;
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+main>section.preservation>div.summary>h2::after {
+    content: "";
+    display: block;
+    inline-size: 2em;
+    block-size: 4px;
+    background: var(--main-theme-color);
+}
+
+main>section.preservation>div.step>h3::after {
+    content: "";
+    display: block;
+    inline-size: 2em;
+    block-size: 3px;
+    background: var(--main-theme-color);
+}
+
+main>section.staff>div.staff-members {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2em 2em;
+    justify-content: space-evenly;
+}
+
+main>section.staff div.staff-member {
+    inline-size: 20em;
+    padding: 1em 2em;
+    background: #CCCCCC;
+    box-shadow: rgba(var(--secondary-red), var(--secondary-green), var(--secondary-blue), 0.7) 5px 5px 2px 0px;
+
+    display: grid;
+    grid: 5em 20em 15em / 1fr;
+}
+
+
+main>section.staff div.staff-member>h3 {
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    align-self: center;
+    transition: font-size 0.3s ease;
+}
+
+main>section.staff div.staff-member>img {
+    border-radius: 50%;
+    inline-size: 20em;
+    block-size: 20em;
+    margin: 0 auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+main>section.staff div.staff-member>p {
+    transition: color 0.3s ease;
+}
+
+main>section.staff div.staff-member:hover {
+    box-shadow: rgba(var(--secondary-red), var(--secondary-green), var(--secondary-blue), 1) 7px 7px 7px 0px;
+}
+
+main>section.staff div.staff-member:hover h3 {
+    font-size: 2em;
+}
+
+main>section.staff div.staff-member:hover img {
+    opacity: 1;
+}
+
+main>section.staff div.staff-member:hover p {
+    font-weight: bold;
+    /* color: rgba(var(--secondary-red), var(--secondary-green), var(--secondary-blue), 1); */
+}
+
+main>section.staff div.staff-member>p {
+    color: #444;
+    font-style: italic;
+    align-self: start;
+    text-align: center;
+}
+
+main>section.staff>h2 {
+    font-size: 2.5em;
+    font-weight: 900;
+    text-align: center;
+}
+
+main>section.staff>h2::after {
+    content: "";
+    display: block;
+    inline-size: 100%;
+    block-size: 5px;
+    background: var(--main-theme-color);
+}
+
+main>section.article>h2::after {
+    content: "";
+    display: block;
+    inline-size: 2em;
+    block-size: 5px;
+    background: var(--main-theme-color);
+}
+
+main>section.contact-us {
+    background: #F5F5F5;
+    display: flex;
+    gap: 2em;
+}
+
+main>section.contact-us>* {
+    flex: 1 1 0;
+}
+
+main>section.contact-us h2 {
+    position: relative;
+
+    font-size: 2.5em;
+    text-align: right;
+}
+
+main>section.contact-us h2::after {
+    position: absolute;
+    right: 0;
+
+    content: "";
+    display: block;
+    inline-size: 3em;
+    block-size: 5px;
+    background: var(--main-theme-color);
+}
+
+main>section.contact-us p {
+    text-align: right;
+}
+
+
+main>section.contact-us>form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+}
+
+
+main>section.contact-us>form label {
+    font-weight: bold;
+}
+
+main>section.contact-us>form input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 6px 0 16px;
+}
+
+main>section.contact-us>form input[type=submit] {
+    font-weight: bold;
+    background-color: #666;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main>section.contact-us>form input[type=submit]:hover {
+    background-color: var(--secondary-theme-color);
+}
+
+footer {
+    background: white;
+    color: #666;
+    padding: 1em 5%;
+
+    display: flex;
+    align-items: center;
+    gap: 0 1em;
+}
+
+footer>span.copyright {
+    margin-right: auto;
+}
+
+footer>a.social-media {
+    color: #666;
+    padding: 0;
+}
+
+div#scrollup {
+    display: none;
+
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+
+    font-size: 2em;
+    block-size: 1em;
+    inline-size: 1em;
+
+    background-color: var(--main-theme-color);
+    color: white;
+
+    cursor: pointer;
+
+    text-align: center;
+}
+
+div#scrollup:hover {
+    background-color: var(--secondary-theme-color);
+}
+
+a.social-media:hover i.fab {
+    color: var(--secondary-theme-color);
+}
+
+p::first-letter {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* responsive web design (phones) */
+@media (max-width: 999px) {
+
+    /* general */
+    body {
+        padding: 0.5em;
+    }
+
+    body p {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    /* header */
+    header>nav.crumbs {
+        align-items: stretch;
+    }
+
+    header>nav.crumbs>a:not(#menu-on).logo {
+        font-size: 4.5em;
+    }
+
+    nav.crumbs>a.logo:not(#menu-on)::after {
+        display: none;
+    }
+
+    header>nav.crumbs>a.crumb:not(.logo) {
+        display: none;
+    }
+
+    /* mobile menu */
+    a.crumb.logo {
+        margin: 0.5em 0;
+    }
+
+    #menu-on {
+        display: inline;
+        margin-right: 0;
+    }
+
+    header>nav.mobile-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: white;
+
+        /* display: flex; */
+        display: none;
+        flex-direction: column;
+
+        font-size: 3em;
+        color: #666;
+    }
+
+    body>header>nav.mobile-menu>.switch {
+        margin: 1em 1em 0 auto;
+    }
+
+    header>nav.mobile-menu>a {
+        display: inline-block;
+
+        inline-size: 90%;
+        block-size: 2em;
+
+        text-align: left;
+        text-decoration: none;
+        margin: 1em auto 0 auto;
+        border-bottom: 1px solid #666;
+    }
+
+    header>nav.mobile-menu>a:visited {
+        color: inherit;
+    }
+
+    /* sections general */
+    main>section {
+        padding: 0 7%;
+        margin-bottom: 3em;
+    }
+
+    /* intro section */
+    main>section.intro {
+        display: flex;
+        flex-direction: column;
+    }
+
+    body>main>section.intro>div.start>h1 {
+        text-align: center;
+    }
+
+    main>section.intro h1::after {
+        inline-size: 100%;
+    }
+
+    /* gallery section */
+    body>main>section.gallery>h2.section-header {
+        font-size: 3em;
+    }
+
+    /* preservation section */
+    main>section.preservation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main>section.preservation>div.summary>h2 {
+        font-size: 3em;
+        font-weight: 900;
+        text-align: center;
+    }
+
+    main>section.preservation>div.summary>h2::after {
+        inline-size: 100%;
+    }
+
+    body>main>section.article>h2 {
+        font-size: 3em;
+        text-align: center;
+    }
+
+    /* staff section */
+    main>section.staff>h2 {
+        font-size: 3em;
+    }
+
+    main>section.staff div.staff-member {
+        inline-size: 100%;
+        grid: 5em 20em auto / 1fr;
+    }
+
+    main>section.staff div.staff-member>img {
+        opacity: 1;
+    }
+
+    /* article section */
+    main>section.article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main>section.article>h2::after {
+        inline-size: 100%;
+    }
+
+    /* contact us section */
+    main>section.contact-us {
+        flex-direction: column;
+    }
+
+    main>section.contact-us>* {
+        flex: none;
+    }
+
+    main>section.contact-us h2 {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    main>section.contact-us h2::after {
+        left: 0;
+        inline-size: 100%;
+    }
+
+    main>section.contact-us p {
+        text-align: left;
+    }
+
+    main>section.contact-us>form {
+        padding: 0;
+    }
+
+    body>main>section.contact-us>form>* {
+        font-size: 2em;
+    }
+
+    body>main>section.contact-us>form>input,
+    select,
+    textarea {
+        margin-bottom: 1em;
+    }
+
+    body>main>section.contact-us>form>input[type=submit] {
+        background-color: var(--secondary-theme-color);
+    }
+
+    /* footer */
+    footer {
+        block-size: 4em;
+        font-size: 2em;
+        flex-wrap: wrap;
+    }
+
+    footer>span.copyright {
+        inline-size: 100%;
+        text-align: center;
+    }
+
+    body>footer>a.crumb.social-media.first-social {
+        margin-left: auto;
+    }
+
+    body>footer>a:last-child {
+        margin-right: auto;
+    }
+}
