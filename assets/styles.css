@@ -473,6 +473,8 @@ p::first-letter {
 
         font-size: 3em;
         color: #666;
+
+        box-shadow: 0px 3px 3px 1px rgba(var(--main-red), var(--main-green), var(--main-blue), 0.5);
     }
 
     body>header>nav.mobile-menu>.switch {
@@ -593,17 +595,20 @@ p::first-letter {
     }
 
     body>main>section.contact-us>form>* {
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
-    body>main>section.contact-us>form>input,
+    main>section.contact-us>form input[type=text],
     select,
     textarea {
-        margin-bottom: 1em;
+        margin: 0.6em 0;
     }
 
     body>main>section.contact-us>form>input[type=submit] {
         background-color: var(--secondary-theme-color);
+        block-size: 2.5em;
+        margin-top: 0.3em;
+        margin-bottom: 1em;
     }
 
     /* footer */
