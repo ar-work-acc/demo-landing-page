@@ -12,7 +12,7 @@
 
 body {
     background: #CCCCCC;
-    font-family: Arial;
+    font-family: sans-serif;
 
     padding: 1em;
 }
@@ -380,6 +380,10 @@ footer {
 
 footer>span.copyright {
     margin-right: auto;
+}
+
+footer>span.copyright i {
+    font-family: cursive;
 }
 
 footer>a.social-media {
