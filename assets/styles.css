@@ -1,4 +1,10 @@
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+@font-face {
+    font-family: 'alexbrush';
+    src:
+        url('fonts/alexbrush-regular-webfont.woff2') format('woff2');
+}
+
 :root {
     --main-theme-color: rgb(250, 169, 19);
     --main-red: 250;
@@ -36,6 +42,7 @@ nav.crumbs {
 }
 
 nav.crumbs>a.logo {
+    font-family: 'alexbrush';
     margin-right: auto;
 
     font-size: 3em;
@@ -383,7 +390,10 @@ footer>span.copyright {
 }
 
 footer>span.copyright i {
-    font-family: cursive;
+    font-family: 'alexbrush', cursive;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: rgb(54, 54, 126);
 }
 
 footer>a.social-media {
@@ -420,8 +430,11 @@ a.social-media:hover i.fab {
 
 p::first-letter {
     text-transform: uppercase;
-    font-size: 1.5em;
+    font-family: 'alexbrush', cursive;
+    font-size: 2em;
     font-weight: bold;
+    color: rgb(60, 0, 0);
+    margin-right: 0.2em;
 }
 
 /* responsive web design (phones) */
