@@ -42,7 +42,7 @@ nav.crumbs {
 }
 
 nav.crumbs>a.logo {
-    font-family: 'alexbrush';
+    font-family: 'alexbrush', sans-serif;
     margin-right: auto;
 
     font-size: 3em;
@@ -430,12 +430,12 @@ a.social-media:hover i.fab {
 
 p::first-letter {
     text-transform: uppercase;
-    font-family: 'alexbrush', cursive;
+    font-family: 'alexbrush', sans-serif;
     font-size: 2em;
     line-height: 0.5;
     font-weight: bold;
     color: rgb(60, 0, 0);
-    margin-right: 0.2em;
+    margin-right: 0.1em;
 }
 
 /* responsive web design (phones) */
