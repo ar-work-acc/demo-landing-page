@@ -3,6 +3,7 @@
     font-family: 'alexbrush';
     src:
         url('fonts/alexbrush-regular-webfont.woff2') format('woff2');
+    font-display: swap;
 }
 
 :root {
@@ -20,7 +21,7 @@ body {
     background: #CCCCCC;
     font-family: sans-serif;
 
-    padding: 1em;
+    padding: 1rem;
 }
 
 header {
@@ -45,14 +46,14 @@ nav.crumbs>a.logo {
     font-family: 'alexbrush', sans-serif;
     margin-right: auto;
 
-    font-size: 3em;
-    font-weight: bold;
+    font-size: 3rem;
+    font-weight: 900;
 
-    padding: 0.2em 1em 0 1em;
+    padding: 0.6rem 3rem 0 3rem;
 }
 
 #menu-on {
-    padding: 0.2em 0 0 0;
+    padding: 0.2rem 0 0 0;
     color: #666;
     font-weight: 100 !important;
     display: none;
@@ -73,7 +74,7 @@ nav.crumbs>a {
 
 nav.crumbs>a:not(.logo):not(.social-media) {
     align-self: stretch;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 
     display: flex;
     align-items: center;
@@ -94,15 +95,15 @@ nav.crumbs>a:not(.social-media):focus {
 
 nav.crumbs>a.crumb.social-media {
     color: #666;
-    margin-left: 1em;
+    margin-left: 1rem;
 }
 
 nav.crumbs>a.crumb.social-media.first-social {
-    margin-left: 2em;
+    margin-left: 2rem;
 }
 
 nav.crumbs>a.crumb:not(.social-media):not(.logo) {
-    flex: 1 0 7em;
+    flex: 1 0 7rem;
     text-align: center;
 }
 
@@ -115,7 +116,7 @@ main {
 }
 
 main>section {
-    padding: 2em 15%;
+    padding: 2rem 15%;
 }
 
 main>section.intro {
@@ -125,18 +126,18 @@ main>section.intro {
     grid:
         /* Note: you can NOT use repeat() here! Or it won't work! */
         "first image image" auto "first image image" auto "second second second" auto / 1fr 1fr 1fr;
-    gap: 1em;
+    gap: 1rem;
 }
 
 main>section.intro h1 {
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: 900;
 }
 
 main>section.intro h1::after {
     content: "";
     display: block;
-    inline-size: 2em;
+    inline-size: 6rem;
     block-size: 5px;
     background: var(--main-theme-color);
 }
@@ -160,11 +161,11 @@ main>section.gallery {
     display: grid;
     grid:
         auto-flow auto / repeat(3, 1fr);
-    gap: 1em;
+    gap: 1rem;
 }
 
 main>section.gallery>h2.section-header {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: 900;
     text-align: center;
     grid-area: 1 / 1 / 2 / 4;
@@ -196,18 +197,18 @@ main>section.gallery>div.animal>img:hover {
 main>section.preservation {
     display: grid;
     grid: repeat(2, auto) / 2fr 1fr 1fr;
-    gap: 1em;
+    gap: 1rem;
 }
 
 main>section.preservation>div.summary {
-    margin: 0 2em 0 0;
+    margin: 0 2rem 0 0;
     grid-area: 1 / 1 / 3 / 2;
 }
 
 main>section.preservation>div.summary>h2::after {
     content: "";
     display: block;
-    inline-size: 2em;
+    inline-size: 3rem;
     block-size: 4px;
     background: var(--main-theme-color);
 }
@@ -215,7 +216,7 @@ main>section.preservation>div.summary>h2::after {
 main>section.preservation>div.step>h3::after {
     content: "";
     display: block;
-    inline-size: 2em;
+    inline-size: 2rem;
     block-size: 3px;
     background: var(--main-theme-color);
 }
@@ -223,24 +224,24 @@ main>section.preservation>div.step>h3::after {
 main>section.staff>div.staff-members {
     display: flex;
     flex-flow: row wrap;
-    gap: 2em 2em;
+    gap: 2rem 2rem;
     justify-content: space-evenly;
 }
 
 main>section.staff div.staff-member {
-    inline-size: 20em;
-    padding: 1em 2em;
+    inline-size: 20rem;
+    padding: 1rem 2rem;
     background: #CCCCCC;
     box-shadow: rgba(var(--secondary-red), var(--secondary-green), var(--secondary-blue), 0.7) 5px 5px 2px 0px;
 
     display: grid;
-    grid: 5em 20em 15em / 1fr;
+    grid: 5rem 20rem 15rem / 1fr;
 }
 
 
 main>section.staff div.staff-member>h3 {
     font-style: italic;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: 900;
     text-align: center;
     align-self: center;
@@ -249,8 +250,8 @@ main>section.staff div.staff-member>h3 {
 
 main>section.staff div.staff-member>img {
     border-radius: 50%;
-    inline-size: 20em;
-    block-size: 20em;
+    inline-size: 20rem;
+    block-size: 20rem;
     margin: 0 auto;
     opacity: 0.7;
     transition: opacity 0.3s ease;
@@ -265,7 +266,7 @@ main>section.staff div.staff-member:hover {
 }
 
 main>section.staff div.staff-member:hover h3 {
-    font-size: 2em;
+    font-size: 2rem;
 }
 
 main>section.staff div.staff-member:hover img {
@@ -285,7 +286,7 @@ main>section.staff div.staff-member>p {
 }
 
 main>section.staff>h2 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: 900;
     text-align: center;
 }
@@ -301,7 +302,7 @@ main>section.staff>h2::after {
 main>section.article>h2::after {
     content: "";
     display: block;
-    inline-size: 2em;
+    inline-size: 3rem;
     block-size: 5px;
     background: var(--main-theme-color);
 }
@@ -309,7 +310,7 @@ main>section.article>h2::after {
 main>section.contact-us {
     background: #F5F5F5;
     display: flex;
-    gap: 2em;
+    gap: 2rem;
 }
 
 main>section.contact-us>* {
@@ -319,7 +320,7 @@ main>section.contact-us>* {
 main>section.contact-us h2 {
     position: relative;
 
-    font-size: 2.5em;
+    font-size: 2.5rem;
     text-align: right;
 }
 
@@ -329,7 +330,7 @@ main>section.contact-us h2::after {
 
     content: "";
     display: block;
-    inline-size: 3em;
+    inline-size: 7.5rem;
     block-size: 5px;
     background: var(--main-theme-color);
 }
@@ -342,7 +343,7 @@ main>section.contact-us p {
 main>section.contact-us>form {
     display: flex;
     flex-direction: column;
-    padding: 1em 2em;
+    padding: 1rem 2rem;
 }
 
 
@@ -378,11 +379,11 @@ main>section.contact-us>form input[type=submit]:hover {
 footer {
     background: white;
     color: #666;
-    padding: 1em 5%;
+    padding: 1rem 5%;
 
     display: flex;
     align-items: center;
-    gap: 0 1em;
+    gap: 0 1rem;
 }
 
 footer>span.copyright {
@@ -392,7 +393,7 @@ footer>span.copyright {
 footer>span.copyright i {
     font-family: 'alexbrush', cursive;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: rgb(54, 54, 126);
 }
 
@@ -405,12 +406,12 @@ div#scrollup {
     display: none;
 
     position: fixed;
-    bottom: 1em;
-    right: 1em;
+    bottom: 2rem;
+    right: 2rem;
 
-    font-size: 2em;
-    block-size: 1em;
-    inline-size: 1em;
+    font-size: 2rem;
+    inline-size: 2rem;
+    block-size: 2rem;
 
     background-color: var(--main-theme-color);
     color: white;
@@ -431,11 +432,11 @@ a.social-media:hover i.fab {
 p::first-letter {
     text-transform: uppercase;
     font-family: 'alexbrush', sans-serif;
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 0.5;
     font-weight: bold;
     color: rgb(60, 0, 0);
-    margin-right: 0.1em;
+    margin-right: 0.1rem;
 }
 
 /* responsive web design (phones) */
@@ -443,7 +444,7 @@ p::first-letter {
 
     /* general */
     body {
-        padding: 0.5em;
+        padding: 0.5rem;
     }
 
     body p {
@@ -457,7 +458,7 @@ p::first-letter {
     }
 
     header>nav.crumbs>a:not(#menu-on).logo {
-        font-size: 4.5em;
+        font-size: 4.5rem;
     }
 
     nav.crumbs>a.logo:not(#menu-on)::after {
@@ -470,7 +471,7 @@ p::first-letter {
 
     /* mobile menu */
     a.crumb.logo {
-        margin: 0.5em 0;
+        margin: 3rem 0;
     }
 
     #menu-on {
@@ -484,31 +485,37 @@ p::first-letter {
         left: 0;
         right: 0;
         background: white;
-        padding: 0 0 0.5em 0;
+        padding: 0 0 2rem 0;
 
         /* display: flex; */
         display: none;
         flex-direction: column;
 
-        font-size: 3em;
+        font-size: 3rem;
         color: #666;
 
         box-shadow: 0px 3px 3px 1px rgba(var(--main-red), var(--main-green), var(--main-blue), 0.5);
     }
 
+    header>nav.mobile-menu>#menu-off {
+        position: absolute;
+        top: 2.5rem;
+        right: 1.5rem;
+    }
+
     body>header>nav.mobile-menu>.switch {
-        margin: 1em 1em 0 auto;
+        margin: 1rem 1rem 0 auto;
     }
 
     header>nav.mobile-menu>a {
         display: inline-block;
 
         inline-size: 90%;
-        block-size: 2em;
+        block-size: 6rem;
 
         text-align: left;
         text-decoration: none;
-        margin: 1em auto 0 auto;
+        margin: 3rem auto 0 auto;
         border-bottom: 1px solid #666;
     }
 
@@ -519,7 +526,7 @@ p::first-letter {
     /* sections general */
     main>section {
         padding: 0 7%;
-        margin-bottom: 3em;
+        margin-bottom: 3rem;
     }
 
     /* intro section */
@@ -538,7 +545,7 @@ p::first-letter {
 
     /* gallery section */
     body>main>section.gallery>h2.section-header {
-        font-size: 3em;
+        font-size: 3rem;
     }
 
     /* preservation section */
@@ -548,7 +555,7 @@ p::first-letter {
     }
 
     main>section.preservation>div.summary>h2 {
-        font-size: 3em;
+        font-size: 3rem;
         font-weight: 900;
         text-align: center;
     }
@@ -558,18 +565,18 @@ p::first-letter {
     }
 
     body>main>section.article>h2 {
-        font-size: 3em;
+        font-size: 3rem;
         text-align: center;
     }
 
     /* staff section */
     main>section.staff>h2 {
-        font-size: 3em;
+        font-size: 3rem;
     }
 
     main>section.staff div.staff-member {
         inline-size: 100%;
-        grid: 5em 20em auto / 1fr;
+        grid: 5rem 20rem auto / 1fr;
     }
 
     main>section.staff div.staff-member>img {
@@ -597,7 +604,7 @@ p::first-letter {
 
     main>section.contact-us h2 {
         text-align: center;
-        font-size: 3em;
+        font-size: 3rem;
     }
 
     main>section.contact-us h2::after {
@@ -614,39 +621,49 @@ p::first-letter {
     }
 
     body>main>section.contact-us>form>* {
-        font-size: 2.2em;
+        font-size: 2.2rem;
     }
 
     main>section.contact-us>form input[type=text],
     select,
     textarea {
-        margin: 0.6em 0;
+        margin: 1.2rem 0;
     }
 
     body>main>section.contact-us>form>input[type=submit] {
         background-color: var(--secondary-theme-color);
-        block-size: 2.5em;
-        margin-top: 0.3em;
-        margin-bottom: 1em;
+        block-size: 5rem;
+        margin-top: 0.6rem;
+        margin-bottom: 2rem;
     }
 
     /* footer */
     footer {
-        block-size: 4em;
-        font-size: 2em;
+        block-size: 8rem;
+        font-size: 2rem;
         flex-wrap: wrap;
     }
 
     footer>span.copyright {
         inline-size: 100%;
         text-align: center;
+        margin-top: 1rem;
+    }
+
+    footer>span.copyright i {
+        font-size: 2.4rem;
     }
 
     body>footer>a.crumb.social-media.first-social {
         margin-left: auto;
     }
 
-    body>footer>a:last-child {
+    body>footer>a.crumb.social-media {
+        margin-inline: 0.5rem 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    body>footer>a.crumb.social-media:last-child {
         margin-right: auto;
     }
 }
