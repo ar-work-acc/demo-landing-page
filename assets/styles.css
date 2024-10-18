@@ -432,6 +432,7 @@ p::first-letter {
     text-transform: uppercase;
     font-family: 'alexbrush', cursive;
     font-size: 2em;
+    line-height: 0.5;
     font-weight: bold;
     color: rgb(60, 0, 0);
     margin-right: 0.2em;
