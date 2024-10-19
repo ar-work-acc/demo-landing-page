@@ -1,11 +1,12 @@
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 @font-face {
     font-family: 'alexbrush';
     src:
         url('fonts/alexbrush-regular-webfont.woff2') format('woff2');
     font-display: swap;
+    size-adjust: 110%;
 }
 
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 :root {
     --main-theme-color: rgb(250, 169, 19);
     --main-red: 250;
