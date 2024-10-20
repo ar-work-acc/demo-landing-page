@@ -435,7 +435,7 @@ p::first-letter {
     font-family: 'alexbrush', sans-serif;
     font-size: 2rem;
     line-height: 0.5;
-    font-weight: bold;
+    font-weight: 600;
     color: rgb(60, 0, 0);
     margin-right: 0.1rem;
 }
