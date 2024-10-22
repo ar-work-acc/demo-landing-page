@@ -44,12 +44,9 @@ nav.crumbs {
 }
 
 nav.crumbs>a.logo {
-    font-family: 'alexbrush', sans-serif;
+    font: 900 3rem 'alexbrush', sans-serif;
+
     margin-right: auto;
-
-    font-size: 3rem;
-    font-weight: 900;
-
     padding: 0.6rem 3rem 0 3rem;
 }
 
@@ -392,9 +389,7 @@ footer>span.copyright {
 }
 
 footer>span.copyright i {
-    font-family: 'alexbrush', cursive;
-    font-weight: bold;
-    font-size: 1.2rem;
+    font: bold 1.2rem 'alexbrush', cursive;
     color: rgb(54, 54, 126);
 }
 
@@ -431,12 +426,10 @@ a.social-media:hover i.fab {
 }
 
 p::first-letter {
+    font: 600 2rem/0.5 'alexbrush', sans-serif;
     text-transform: uppercase;
-    font-family: 'alexbrush', sans-serif;
-    font-size: 2rem;
-    line-height: 0.5;
-    font-weight: 600;
     color: rgb(60, 0, 0);
+
     margin-right: 0.1rem;
 }
 
