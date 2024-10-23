@@ -27,6 +27,7 @@ body {
 
 p:not(.staff-member p) {
     text-indent: 1em;
+    text-align: justify;
 }
 
 header {
@@ -610,7 +611,7 @@ p::first-letter {
     }
 
     main>section.contact-us p {
-        text-align: left;
+        text-align: justify;
     }
 
     main>section.contact-us>form {
