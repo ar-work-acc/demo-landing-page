@@ -25,6 +25,10 @@ body {
     padding: 1rem;
 }
 
+p:not(.staff-member p) {
+    text-indent: 1em;
+}
+
 header {
     padding: 0 2%;
     background: white;
