@@ -21,8 +21,11 @@
 body {
     background: #CCCCCC;
     font-family: sans-serif;
-
     padding: 1rem;
+}
+
+h1 {
+    text-transform: uppercase;
 }
 
 p:not(.staff-member p) {
