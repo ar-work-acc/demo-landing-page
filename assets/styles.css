@@ -261,11 +261,6 @@ main>section.staff div.staff-member>img {
     block-size: 20rem;
     margin: 0 auto;
     opacity: 0.7;
-    transition: opacity 0.5s ease;
-}
-
-main>section.staff div.staff-member>p {
-    transition: color 0.5s ease;
 }
 
 main>section.staff div.staff-member:hover {
@@ -276,7 +271,8 @@ main>section.staff div.staff-member:hover h3 {
     font-size: 2rem;
 }
 
-main>section.staff div.staff-member:hover img {
+main>section.staff div.staff-member:hover>img {
+    transition: scale 0.5s ease, opacity 1s ease;
     scale: 1.1;
     opacity: 1;
 }
@@ -284,7 +280,8 @@ main>section.staff div.staff-member:hover img {
 main>section.staff div.staff-member:hover p {
     padding-top: 0.5em;
     font-weight: bold;
-    /* color: rgba(var(--secondary-red), var(--secondary-green), var(--secondary-blue), 1); */
+    /* transition: color 3s ease;
+    color: rgba(var(--secondary-red), var(--secondary-green), var(--secondary-blue), 1); */
 }
 
 main>section.staff div.staff-member>p {
