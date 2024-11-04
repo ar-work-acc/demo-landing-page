@@ -23,9 +23,11 @@ scrollUpBtn.addEventListener("click", function () {
 // Menu functions
 document.getElementById("menu-on").addEventListener("click", () => {
   const mobileMenu = document.getElementsByClassName("mobile-menu")[0]
-  mobileMenu.style.display = "flex"
+  mobileMenu.classList.add("m-on")
+  mobileMenu.classList.remove("m-off")
 })
 document.getElementById("menu-off").addEventListener("click", () => {
   const mobileMenu = document.getElementsByClassName("mobile-menu")[0]
-  mobileMenu.style.display = "none"
+  mobileMenu.classList.add("m-off")
+  mobileMenu.classList.remove("m-on")
 })

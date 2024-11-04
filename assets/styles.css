@@ -114,8 +114,18 @@ nav.crumbs>a.crumb:not(.social-media):not(.logo) {
     text-align: center;
 }
 
-nav.mobile-menu {
-    display: none;
+.mobile-menu {
+    display: flex;
+    transition: transform 0.5s ease;
+    transform-origin: 95% 2.5rem;
+}
+
+.m-on {
+    transform: scale(1, 1);
+}
+
+.m-off {
+    transform: scale(0, 0);
 }
 
 main {
@@ -488,8 +498,6 @@ p::first-letter {
         background: white;
         padding: 0 0 2rem 0;
 
-        /* display: flex; */
-        display: none;
         flex-direction: column;
 
         font-size: 3rem;
