@@ -116,7 +116,7 @@ nav.crumbs>a.crumb:not(.social-media):not(.logo) {
 
 .mobile-menu {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 300ms ease-in-out;
     transform-origin: 95% 2.5rem;
 }
 
