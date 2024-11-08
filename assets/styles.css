@@ -408,7 +408,26 @@ footer>span.copyright {
 
 footer>span.copyright i {
     font: bold 1.2rem 'alexbrush', cursive;
+}
+
+@keyframes glow {
+    0% {
+        color: rgb(54, 54, 126);
+    }
+
+    50% {
+        color: rgb(139, 9, 252);
+        text-shadow: 0px 0px 1px red;
+    }
+
+    100% {
+        color: rgb(54, 54, 126);
+    }
+}
+
+#author {
     color: rgb(54, 54, 126);
+    animation: glow 3s linear 0s infinite alternate-reverse both;
 }
 
 footer>a.social-media {
