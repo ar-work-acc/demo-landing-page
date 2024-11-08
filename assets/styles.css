@@ -424,7 +424,7 @@ footer>span.copyright {
 footer>span.copyright i#author {
     font: bold 1.2em 'alexbrush', cursive;
     color: rgb(54, 54, 126);
-    animation: glow 3s linear 0s infinite alternate-reverse both;
+    animation: 3s linear 0s infinite alternate-reverse both glow;
 }
 
 footer>a.social-media {
