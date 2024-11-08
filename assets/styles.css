@@ -406,10 +406,6 @@ footer>span.copyright {
     margin-right: auto;
 }
 
-footer>span.copyright i {
-    font: bold 1.2rem 'alexbrush', cursive;
-}
-
 @keyframes glow {
     0% {
         color: rgb(54, 54, 126);
@@ -425,7 +421,8 @@ footer>span.copyright i {
     }
 }
 
-#author {
+footer>span.copyright i#author {
+    font: bold 1.2em 'alexbrush', cursive;
     color: rgb(54, 54, 126);
     animation: glow 3s linear 0s infinite alternate-reverse both;
 }
