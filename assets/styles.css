@@ -208,7 +208,7 @@ main>section.gallery>div.animal>img {
 }
 
 main>section.gallery>div.animal>img:hover {
-    opacity: 0.8;
+    filter: brightness(105%) contrast(1.3);
 }
 
 main>section.preservation {
